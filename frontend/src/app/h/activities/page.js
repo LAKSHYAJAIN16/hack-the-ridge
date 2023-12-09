@@ -26,17 +26,139 @@ export default function Home() {
         <br />
       </main>
       <br />
-      <div className="ml-72">
-        <h1 className="text-white text-4xl fm">24th Jan - Food Challenge!</h1>
-        <p className="text-white fm text-2xl">
-          Share your country's food with your pal!
-        </p>
-        <div className="flex">
-          <p className="text-white">Justin + Eliza</p>
-          <img
-            src="https://picsum.photos/100/100"
-            className="border-2 border-red-500 rounded-md mb-5"
-          ></img>
+
+      <div className="ml-32">
+        <div>
+          <h1 className="text-white text-4xl fm">24th Jan - Food Challenge!</h1>
+          <p className="text-white fm text-2xl">
+            Share your country's food with your pal!
+          </p>
+          <div className="flex">
+            <div className="flex flex-col">
+              <p className="text-white text-center">Justin + Eliza</p>
+              <div className="flex">
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-red-500 rounded-md mb-5"
+                ></img>
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-blue-500 rounded-md mb-5 ml-2"
+                ></img>
+              </div>
+            </div>
+
+            <div className="flex flex-col ml-4">
+              <p className="text-white text-center">Lakshya + Priyana</p>
+              <div className="flex">
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-red-500 rounded-md mb-5"
+                ></img>
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-blue-500 rounded-md mb-5 ml-2"
+                ></img>
+              </div>
+            </div>
+
+            <div className="flex flex-col ml-4">
+              <p className="text-white text-center">Joe + Alex</p>
+              <div className="flex">
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-red-500 rounded-md mb-5"
+                ></img>
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-blue-500 rounded-md mb-5 ml-2"
+                ></img>
+              </div>
+            </div>
+
+            <div className="flex flex-col ml-4">
+              <p className="text-white text-center">Bob + Alice</p>
+              <div className="flex">
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-red-500 rounded-md mb-5"
+                ></img>
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-blue-500 rounded-md mb-5 ml-2"
+                ></img>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <br />
+
+        <div>
+          <h1 className="text-white text-4xl fm">
+            31th Jan - Dance Challenge!
+          </h1>
+          <p className="text-white fm text-2xl">
+            Share your country's native dance with your pal!
+          </p>
+          <div className="flex">
+            <div className="flex flex-col">
+              <p className="text-white text-center">Justin + Eliza</p>
+              <div className="flex">
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-red-500 rounded-md mb-5"
+                ></img>
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-blue-500 rounded-md mb-5 ml-2"
+                ></img>
+              </div>
+            </div>
+
+            <div className="flex flex-col ml-4">
+              <p className="text-white text-center">Lakshya + Priyana</p>
+              <div className="flex">
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-red-500 rounded-md mb-5"
+                ></img>
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-blue-500 rounded-md mb-5 ml-2"
+                ></img>
+              </div>
+            </div>
+
+            <div className="flex flex-col ml-4">
+              <p className="text-white text-center">Joe + Alex</p>
+              <div className="flex">
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-red-500 rounded-md mb-5"
+                ></img>
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-blue-500 rounded-md mb-5 ml-2"
+                ></img>
+              </div>
+            </div>
+
+            <div className="flex flex-col ml-4">
+              <p className="text-white text-center">Bob + Alice</p>
+              <div className="flex">
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-red-500 rounded-md mb-5"
+                ></img>
+                <img
+                  src="https://picsum.photos/100/100"
+                  className="border-2 border-blue-500 rounded-md mb-5 ml-2"
+                ></img>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
