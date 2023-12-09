@@ -1,14 +1,28 @@
 "use client";
 
+import axios from "axios";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "@/lib/fire";
 import { useState } from "react";
 
 import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
+import sleep from "@/lib/sleep";
+
+export const COUNTRY_TO_FLAG_EMOJI = {
+  "ca" : "🇨🇦"
+}
+
+export const COUNTRY_TO_LANG = {
+  "ca" : "en",
+  "jp" : "jp",
+  // and so on
+}
 
 export default function Home() {
   const [state, setState] = useState(0);
   const [user, setUser] = useState();
+  const [displayName, setDisplayName] = useState();
+  const [pfpic, setPfpic] = useState("");
 
   function google() {
     const provider = new GoogleAuthProvider();
@@ -19,9 +33,12 @@ export default function Home() {
         const credential = GoogleAuthProvider.credentialFromResult(result);
 
         // The signed-in user info.
-        const user = result.user;
-        console.log(user);
-        setUser(user);
+        const user_1 = result.user;
+        setUser(user_1);
+        sleep(100);
+        localStorage.setItem("user", JSON.stringify(user_1));
+        setDisplayName(user_1.displayName);
+        setPfpic(user_1.photoURL);
         setState(1);
         geo();
       })
@@ -36,13 +53,17 @@ export default function Home() {
       
   }
 
-  function geo_call(payload){
-    console.log(payload);
-    setState(3);
+  async function geo_call(payload){
+    const lat = payload.coords.latitude;
+    const long = payload.coords.longitude;
+    const res = await axios.get(`https://api.opencagedata.com/geocode/v1/json?key=1ae15b2654ec4932952ffc54335b66f1&q=${lat}+${long}&pretty=1`)
+    const country_1 = res.data.results[0].components.country_code;
+    localStorage.setItem("U", country_1);
+    window.location.replace("/h/onboard");
   }
 
   function geo(){
-    navigator.geolocation.getCurrentPosition(geo_call, errorCallback);
+    navigator.geolocation.getCurrentPosition(geo_call, function(){});
   }
 
   return (
