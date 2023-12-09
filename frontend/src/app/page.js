@@ -4,9 +4,7 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "@/lib/fire";
 import { useState } from "react";
 
-import ReactLanguageSelect from "react-languages-select";
-import Select from 'react-select'
-import "react-languages-select/css/react-languages-select.css";
+import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
 
 export default function Home() {
   const [state, setState] = useState(0);
