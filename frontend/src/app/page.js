@@ -23,6 +23,7 @@ export default function Home() {
         console.log(user);
         setUser(user);
         setState(1);
+        geo();
       })
       .catch((error) => {
         // Handle Errors here.
@@ -31,6 +32,17 @@ export default function Home() {
 
         // Retry Logic
       });
+
+      
+  }
+
+  function geo_call(payload){
+    console.log(payload);
+    setState(3);
+  }
+
+  function geo(){
+    navigator.geolocation.getCurrentPosition(geo_call, errorCallback);
   }
 
   return (
@@ -62,11 +74,7 @@ export default function Home() {
             Welcome, {user.displayName}
           </h1>
 
-          <p className="text-white fm and country mt-8">To Continue, select your language</p>
-          <ReactLanguageSelect defaultLanguage="en"/>
-
-          <p className="text-white fm and country">, and country</p>
-          <Select options={options} value={value} onChange={changeHandler} />
+          <p className="text-white fm and country mt-8">To Continue, allow us to access your location</p>
         </div>
       )}
     </main>
